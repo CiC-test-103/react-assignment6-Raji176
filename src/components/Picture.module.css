@@ -1,0 +1,67 @@
+.drawersStyle {
+     width: 20vw;
+    height: 40vh;  
+    border-top-left-radius: 5%;
+    border-bottom-left-radius: 5%;
+    
+}
+
+.avatarStyle {
+    border-radius: 50%;
+}
+
+.shareStyle {
+    height: 1.7vh;
+    width: 1vw;
+
+}
+
+.facebookStyle {
+    height: 2vh;
+    width: 1vw;
+}
+
+.twitterStyle {
+    height: 2vh;
+    width: 1vw;
+}
+
+.pinterestStyle {
+    height: 2vh;
+    width: 1vw;
+}
+
+/* Tablets and smaller */
+@media (max-width: 768px) {
+    .drawersStyle {
+      width: 60vw;
+      height: auto;
+      border-top-left-radius: 5%;
+      border-top-right-radius: 5%;
+      border-bottom-left-radius: 0;
+    }
+  
+    .shareStyle,
+    .facebookStyle,
+    .twitterStyle,
+    .pinterestStyle {
+      width: 4vw;
+      height: 4vw;
+    }
+  }
+  
+  /* Mobile */
+  @media (max-width: 480px) {
+    .drawersStyle {
+      width: 90vw;
+    }
+  
+    .shareStyle,
+    .facebookStyle,
+    .twitterStyle,
+    .pinterestStyle {
+      width: 6vw;
+      height: 6vw;
+    }
+  }
+  

@@ -49,6 +49,156 @@ h1, h2, h3, h4, h5, h6 {
 /** Global CSS **/
 /* We recommend writing minimal component-specific CSS here */
 
+body {
+  margin: auto;
+  padding: 0;
+  background-color: var(--clr-lightGrayishBlue);
+
+}
+
+.overall {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: auto;
+  width: 50vw;
+  height: auto;
+  margin-top:10rem;
+  background-color: white; 
+  justify-content: center;
+  border-radius: 5%;
+  
+}
+
+.drawersPicture {
+  /* width: 100vw;
+  height: 100vh; */
+  /* display: block;
+  max-width: 100%; */
+}
+
+.remaining {
+  
+  padding: 2rem;
+  width: 30vw
+  /* margin: 1rem; */
+  /* width: 50vw;
+  height: 30vh; */
+}
+
+.avatarBox {
+  display: flex;
+  justify-content:space-between;
+  width: 25vw;
+  padding: 0.5rem;
+  /* margin-top: 1rem; */
+}
+
+.picAndName{
+  display: flex;
+/* justify-content: flex-start; */
+}
+
+.shareBox-selected {
+  background-color: var(--clr-veryDarkGrayishBlue);
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  justify-content:space-around;
+  width: 15rem;
+  position:absolute;
+  top: 18rem;
+  left:60rem;
+
+  
+}
+
+.shareBox-unselected {
+  display: none;
+}
+
+.shareButton {
+  background-color: var(--clr-lightGrayishBlue);
+  border-radius: 50%;
+  border: none;
+  height:2rem;
+  margin-top: 0.2rem;
+  position: relative;
+}
+#shareWord{
+  color:var(--clr-grayishBlue);
+  font-weight: bold;
+}
+
+
+  /* Tablets and below */
+@media (max-width: 768px) {
+  .overall {
+    flex-direction: column;
+    width: 90vw;
+    border-radius: 2%;
+    margin-top: 5rem;
+  }
+
+  .remaining {
+    width: 80vw;
+    padding: 1.5rem;
+  }
+
+  .avatarBox {
+    width: 80vw;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .shareBox-selected {
+    top: auto;
+    left: auto;
+    bottom: -5rem;
+    right: 0;
+    width: 100%;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .overall {
+    width: 95vw;
+    margin-top: 3rem;
+  }
+
+  .remaining {
+    width: 90vw;
+    padding: 1rem;
+  }
+
+  .avatarBox {
+    flex-direction: column;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+
+  .shareBox-selected {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.75rem;
+    width: 100%;
+  }
+
+  .shareButton {
+    margin-top: 0.5rem;
+  }
+}
+
+
+
+
 
 /** Attribution CSS **/
 .attribution { 

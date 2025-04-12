@@ -1,5 +1,18 @@
 /** Component Imports */
 import Example from './components/Example'
+import Picture from './components/Picture'
+import Text from './components/Text'
+import drawersImg from '../images/drawers.jpg'
+import avatarImg from '../images/avatar-michelle.jpg'
+import shareImg from '../images/icon-share.svg'
+import facebookImg from '../images/icon-facebook.svg'
+import twitterImg from '../images/icon-twitter.svg'
+import pinterestImg from '../images/icon-pinterest.svg'
+import './style.css'
+import { useState } from 'react'
+
+
+
 
 /**
  * This is the entry point for your react-app
@@ -13,22 +26,89 @@ import Example from './components/Example'
  */
 
 const App = () => {
+  const [isActive,setIsActive]= useState(false);
   return (
-    <div>
-      {<Example /> /** You can remove this when you wish, it's provided as an example of modular styling */}
-      
-      Shift the overall look and feel by adding these wonderful 
-      touches to furniture in your home
 
-      Ever been in a room and felt like something was missing? Perhaps 
-      it felt slightly bare and uninviting. I’ve got some simple tips 
-      to help you make any room feel complete.
+    <div className='overall'>
+      <div className='drawersPicture'>
+        <Picture
+          classProp={"drawersStyle"}
+          srcProp={drawersImg}
+          altProp={"drawer Pic"}
+          sizeProp={100}
+        />
+      </div>
+      <div className='remaining'>
+        <Text
+          inputText={"Shift the overall look and feel by adding these wonderful touches to furniture in your home"}
+          inputClass={"bold"}
+        />
 
-      Michelle Appleton
-      28 Jun 2020
+        <Text
+          inputText={"Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I’ve got some simple tips to help you make any room feel complete."}
+          inputClass={"normal"}
+        />
 
-      Share
+        <div className='avatarBox'>
+          <div className='picAndName'>
+            <Picture
+              classProp={"avatarStyle"}
+              srcProp={avatarImg}
+              altProp={"avatar Pic"}
+              sizeProp={45}
+            />
+
+            <section className='signature'>
+              <Text
+                inputText={"Michelle Appleton"}
+                inputClass={"signatureBold"}
+              />
+
+              <Text
+                inputText={"28 Jun 2020"}
+                inputClass={"signatureNormal"}
+              />
+            </section>
+          </div>
+          <button className='shareButton' onClick={() => setIsActive(!isActive)}>
+          <Picture
+            classProp={"shareStyle"}
+            srcProp={shareImg}
+            altProp={"share Pic"}
+            sizeProp={20}
+          />
+          </button>
+
+          <div className= {isActive?'shareBox-selected':'shareBox-unselected'}>
+            <p id="shareWord">SHARE</p>
+
+            <Picture
+              classProp={"facebookStyle"}
+              srcProp={facebookImg}
+              altProp={"facebook Pic"}
+              sizeProp={10}
+            />
+
+            <Picture
+              classProp={"twitterStyle"}
+              srcProp={twitterImg}
+              altProp={"facebook Pic"}
+              sizeProp={10}
+            />
+
+            <Picture
+              classProp={"pinterestStyle"}
+              srcProp={pinterestImg}
+              altProp={"facebook Pic"}
+              sizeProp={10}
+            />
+          </div>
+
+        </div>
+
+      </div>
     </div>
+
   )
 }
 

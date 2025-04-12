@@ -1,0 +1,32 @@
+* {  
+    font-family: var(--ff-base);
+    line-height: 1.5rem;
+}
+
+.bold {
+    font-weight: var(--fw-bold);
+    color: var(--clr-veryDarkGrayishBlue);
+    font-size:large;
+    padding: 0.2rem;
+}
+
+.normal {
+    font-size: var(--font-paragraph);
+    font-weight: var(--fw-regular);
+    color: var(--clr-desaturatedDarkBlue);
+    padding: 0.3rem;
+}
+
+.signatureBold {
+    font-weight: var(--fw-bold);
+    color: var(--clr-veryDarkGrayishBlue);
+    font-size:small;
+    /* padding: 0.2rem; */
+}
+
+.signatureNormal {
+    font-size: x-small;
+    font-weight: var(--fw-regular);
+    color: var(--clr-desaturatedDarkBlue);
+    /* padding: 0.3rem; */
+}
